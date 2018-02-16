@@ -42,4 +42,21 @@ public class AccountManagerServiceImpl implements AccountManagerService {
         return connections;
     }
 
+
+
+    public AccountManagerNode  makeDecisionForProduct(String productName){
+        Iterable<AccountManagerNode> accMens = accountManagerRepository.findAll();
+
+        int maxspQ = 0, spQ = 0;
+        AccountManagerNode maxManagerNode = null;
+        for (AccountManagerNode managerNode : accMens) {
+            spQ = accountManagerRepository.countSalesProcessesForProduct(managerNode.getName(), productName);
+            if(spQ > maxspQ){
+                maxspQ = spQ;
+                maxManagerNode = managerNode;
+            }
+        }
+        return maxManagerNode;
+    }
+
 }
