@@ -7,7 +7,7 @@ import rs.prepos.gcrm.dao.AmRelateCompanyRepository;
 import rs.prepos.gcrm.dao.CompanyRepository;
 import rs.prepos.gcrm.domain.nodes.AccountManagerNode;
 import rs.prepos.gcrm.domain.nodes.CompanyNode;
-import rs.prepos.gcrm.domain.relationships.AmRelateCompanyRelationship;
+import rs.prepos.gcrm.domain.relationships.RelateRelationship;
 import rs.prepos.gcrm.service.AccountManagerService;
 
 import java.util.ArrayList;
@@ -25,18 +25,18 @@ public class AccountManagerServiceImpl implements AccountManagerService {
     @Autowired
     AmRelateCompanyRepository amRelateCompanyRepository;
 
-    public List<AmRelateCompanyRelationship>  connectWithCompanyByCity(String city){
+    public List<RelateRelationship>  connectWithCompanyByCity(String city){
         Iterable<AccountManagerNode> accMens = accountManagerRepository.findByCity(city);
         AccountManagerNode myAccMen = accMens.iterator().next(); // i know that is one manager in each city
 
         Iterable<CompanyNode> companies = companyRepository.findByCity(city);
 
-        List<AmRelateCompanyRelationship> connections = new ArrayList<>();
+        List<RelateRelationship> connections = new ArrayList<>();
         Long since = System.currentTimeMillis();
         for (CompanyNode company:companies) {
-            AmRelateCompanyRelationship amRelateCompanyRelationship =
-                    new AmRelateCompanyRelationship(myAccMen, company, since);
-            connections.add(amRelateCompanyRelationship);
+            RelateRelationship relateRelationship =
+                    new RelateRelationship(myAccMen, company, since);
+            connections.add(relateRelationship);
         }
         amRelateCompanyRepository.save(connections);
         return connections;

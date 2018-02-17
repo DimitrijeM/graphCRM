@@ -8,7 +8,7 @@ import rs.prepos.gcrm.domain.nodes.AccountManagerNode;
 import rs.prepos.gcrm.domain.nodes.CompanyNode;
 
 @RelationshipEntity(type = "RELATE")
-public class AmRelateCompanyRelationship {
+public class RelateRelationship {
 
     @GraphId
     Long id;
@@ -21,10 +21,10 @@ public class AmRelateCompanyRelationship {
 
     Long since;
 
-    public AmRelateCompanyRelationship() {
+    public RelateRelationship() {
     }
 
-    public AmRelateCompanyRelationship(AccountManagerNode accountManagerNode, CompanyNode companyNode, Long since) {
+    public RelateRelationship(AccountManagerNode accountManagerNode, CompanyNode companyNode, Long since) {
         this.accountManagerNode = accountManagerNode;
         this.companyNode = companyNode;
         this.since = since;

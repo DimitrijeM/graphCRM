@@ -5,7 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import rs.prepos.gcrm.dao.AccountManagerRepository;
 import rs.prepos.gcrm.domain.nodes.AccountManagerNode;
-import rs.prepos.gcrm.domain.relationships.AmRelateCompanyRelationship;
+import rs.prepos.gcrm.domain.relationships.RelateRelationship;
 import rs.prepos.gcrm.service.AccountManagerService;
 
 import java.util.List;
@@ -32,7 +32,7 @@ public class AMApi {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public AccountManagerNode getAllAMs(@RequestBody AccountManagerNode accountManager){
+    public AccountManagerNode saveAM(@RequestBody AccountManagerNode accountManager){
         return accountManagerRepository.save(accountManager);
     }
 
@@ -43,7 +43,7 @@ public class AMApi {
 
 
     @RequestMapping(value = "/connect-by-city-{city}", method = RequestMethod.GET)
-    public List<AmRelateCompanyRelationship> connectWithCompanies(@PathVariable String city) {
+    public List<RelateRelationship> connectWithCompanies(@PathVariable String city) {
         return accountManagerService.connectWithCompanyByCity(city);
     }
 }
