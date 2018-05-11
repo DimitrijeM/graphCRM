@@ -1,0 +1,627 @@
+{
+	"info": {
+		"name": "GraphCRM",
+		"_postman_id": "563b601f-cbaf-c87a-a14b-54a7b5a7051c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "accmanager",
+			"description": "",
+			"item": [
+				{
+					"name": "save accmanager",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Eric\",\n    \"salesDirector\": {\n        \"id\": 387,\n        \"name\": \"Boss\"\n    }\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/accmanagers/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"accmanagers",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get all accmanagers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/accmanagers/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"accmanagers",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find one accmanager by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/accmanagers/388",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"accmanagers",
+								"388"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "connect accmanager with company by city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/accmanagers/connect-by-city-Novi Sad",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"accmanagers",
+								"connect-by-city-Novi Sad"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Salesdirector",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/salesdirector/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"salesdirector",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get decision for product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/salesdirector/decision/Unlimited CRM",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"salesdirector",
+								"decision",
+								"Unlimited CRM"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"description": "",
+			"item": [
+				{
+					"name": "get all companies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/company/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"company",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get company by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/company/428",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"company",
+								"428"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find company by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/company/byname-NIS",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"company",
+								"byname-NIS"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"description": "",
+			"item": [
+				{
+					"name": "get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find product by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/product/430",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"430"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find product by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/product/byname-Basic CRM",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"byname-Basic CRM"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get all product-category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/product-category/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product-category",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "opportunity",
+			"description": "",
+			"item": [
+				{
+					"name": "get all opportunities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/opportunity/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"opportunity",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "make opportunity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\" : \"Initial opportunity for lead NIS\", \n        \"opportunityAmount\" : 50000,\n        \"expectedCloseDateTimestamp\" : 1526406485,\n        \"salesStage\" : \"Need analysis\",\n        \"company\" :  {\n        \"id\": 428,\n        \"name\": \"NIS\",\n        \"address\": \"Jove Ilica 154\",\n        \"city\": \"Novi Sad\"\n    },\n        \"product\" : {\n\t        \"id\": 508,\n\t        \"name\": \"Unlimited CRM\",\n\t        \"price\": 50000,\n\t        \"description\": \"asd qwe\"\n    }\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/opportunity/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"opportunity",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find opportunity by company ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/opportunity/by-company-NIS",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"opportunity",
+								"by-company-NIS"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find opportunity by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/opportunity/find/566",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"opportunity",
+								"find",
+								"566"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete opportunity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/opportunity/566",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"opportunity",
+								"566"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "offer",
+			"description": "",
+			"item": [
+				{
+					"name": "get all offers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/offer/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"offer",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "make offer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\" : \"First offer for lead NIS\", \n        \"amount\" : 100000,\n        \"quantity\" : 2,\n        \"company\" :  {\n        \"id\": 428,\n        \"name\": \"NIS\",\n        \"address\": \"Jove Ilica 154\",\n        \"city\": \"Novi Sad\"\n    },\n        \"product\" : {\n\t        \"id\": 508,\n\t        \"name\": \"Unlimited CRM\",\n\t        \"price\": 50000,\n\t        \"description\": \"asd qwe\"\n    }\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/offer/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"offer",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find offer by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/offer/find/647",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"offer",
+								"find",
+								"647"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find offer by company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/offer/by-company-NIS",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"offer",
+								"by-company-NIS"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete offer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/offer/647",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"offer",
+								"647"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contract",
+			"description": "",
+			"item": [
+				{
+					"name": "make contract",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\" : \"Contract with NIS for CRM\", \n        \"amount\" : 100000,\n        \"startTimestamp\" : 1518784357,\n        \"endTimestamp\" : 1550320357,\n        \"type\" : \"subscription\",\n    \t\"company\" :  {\n        \"id\": 428,\n        \"name\": \"NIS\",\n        \"address\": \"Jove Ilica 154\",\n        \"city\": \"Novi Sad\"\n    },\n        \"product\" : {\n\t        \"id\": 508,\n\t        \"name\": \"Unlimited CRM\",\n\t        \"price\": 50000,\n\t        \"description\": \"asd qwe\"\n    }\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/contract/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"contract",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find all contracts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/contract/",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"contract",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find contracts by company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8081/contract/by-company-NIS",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"contract",
+								"by-company-NIS"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
